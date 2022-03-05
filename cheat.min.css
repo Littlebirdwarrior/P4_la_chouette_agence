@@ -85,7 +85,7 @@ a:hover {
 }
 
 .texture-paper::before {
-    background: url(img/img-background/texture-paper.png);
+    background: url(img/texture-paper.png);
     background-size: 280px 280px
 }
 
@@ -721,7 +721,7 @@ h4 {
     box-shadow: 0 4px 9px rgba(0, 0, 0, .3)
 }
 
-.black-background {
+.bgc-black {
     background-color: rgba(165, 147, 99, .7);
     padding: 40px 40px 40px 40px
 }
@@ -735,7 +735,7 @@ h4 {
     background-color: #FFF
 }
 
-.bgc-dark-slate-blue {
+.bgc-blue {
     background-color: #364577
 }
 
@@ -743,7 +743,7 @@ h4 {
     background-color: rgb(148, 54, 11)
 }
 
-.tc-white {
+.hell-orange {
     color: #FFF !important
 }
 
@@ -751,12 +751,12 @@ h4 {
     color: rgb(252, 207, 111) !important
 }
 
-.btn-atomic-tangerine {
+.btn-orange {
     background: rgb(148, 54, 11);
     color: #FFFFFF !important
 }
 
-.btn-atomic-tangerine:hover {
+.btn-orange:hover {
     background: rgb(148, 54, 11) !important;
     color: #FFFFFF !important
 }
@@ -791,11 +791,11 @@ h4 {
 }
 
 .bg-banniere {
-    background-image: url(img/img-background/la-chouette-agence-banniere.jpg)
+    background-image: url(img/la-chouette-agence-banniere.jpg)
 }
 
 .bg-presentation {
-    background-image: url(img/img-background/image-de-presentation.jpg)
+    background-image: url(img/image-de-presentation.jpg)
 }
 
 @media (max-width: 1024px) {
