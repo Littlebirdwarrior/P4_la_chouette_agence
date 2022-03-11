@@ -1,3 +1,19 @@
+/*colors*/
+/*
+white: #FFF
+gray: color: rgba(255, 255, 255, .7);
+dark-gray:  rgba(255, 255, 255, .6);
+dark-gray: border-color: rgba(255, 255, 255, .2);
+hell-gray: rgba(255, 255, 255, .6);;
+black: #000;
+black-opacity-.5: color: rgba(0, 0, 0, .7);
+black-opacity-.5: color: rgba(0, 0, 0, .5);
+orange: background: #f18f63; j'ai rajouter de la saturation
+
+
+ */
+
+/*Le reset*/
 body {
     margin: 0;
     padding: 0;
@@ -10,7 +26,8 @@ body {
 a,
 button {
     transition: all .3s ease-in-out;
-    outline: none!important;
+    outline: none !important;
+    border: transparent !important;
 }
 
 a:hover {
@@ -18,15 +35,25 @@ a:hover {
     cursor: pointer;
 }
 
+ul, ol, li {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* le loading*/
+
 #page-loading-blocs-notifaction {
     position: fixed;
     top: 0;
     bottom: 0;
     width: 100%;
     z-index: 100000;
-    background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
+    background: #FFFFFF no-repeat center center;
 }
 
+/* les styles de blocs*/
 .bloc {
     width: 100%;
     clear: both;
@@ -56,47 +83,8 @@ a:hover {
     padding: 20px 50px;
 }
 
-.bg-center,
-.bg-l-edge,
-.bg-r-edge,
-.bg-t-edge,
-.bg-b-edge,
-.bg-tl-edge,
-.bg-bl-edge,
-.bg-tr-edge,
-.bg-br-edge,
-.bg-repeat {
-    -webkit-background-size: auto!important;
-    -moz-background-size: auto!important;
-    -o-background-size: auto!important;
-    background-size: auto!important;
-}
-
-.bg-repeat {
-    background: repeat;
-}
-
-.bg-t-edge {
-    background: top no-repeat;
-}
-
-.bloc-bg-texture::before {
-    content: "";
-    background-size: 2px 2px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-.texture-paper::before {
-    background: url("img/texture-paper.png");
-    background-size: 280px 280px;
-}
-
-.b-parallax {
-    background-attachment: fixed;
+.container {
+    max-width: 1000px;
 }
 
 .d-bloc {
@@ -112,7 +100,7 @@ a:hover {
 .d-bloc .icon-rounded,
 .d-bloc .icon-semi-rounded-a,
 .d-bloc .icon-semi-rounded-b {
-    border-color: rgba(255, 255, 255, .9);
+    border-color: #000000;
 }
 
 .d-bloc .divider-h span {
@@ -132,8 +120,10 @@ a:hover {
 .d-bloc h4 a,
 .d-bloc h5 a,
 .d-bloc h6 a,
-.d-bloc p a {
-    color: rgba(255, 255, 255, .6);
+.d-bloc p a,
+.d-bloc figcaption{
+    /* ici, la transparence est trop forte*/
+    color: #000;
 }
 
 .d-bloc .a-btn:hover,
@@ -150,7 +140,7 @@ a:hover {
 .d-bloc h5 a:hover,
 .d-bloc h6 a:hover,
 .d-bloc p a:hover {
-    color: rgba(255, 255, 255, 1);
+    color: #000;
 }
 
 .d-bloc .navbar-toggle .icon-bar {
@@ -159,7 +149,7 @@ a:hover {
 
 .d-bloc .btn-wire,
 .d-bloc .btn-wire:hover {
-    color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, .1);
     border-color: rgba(255, 255, 255, 1);
 }
 
@@ -171,7 +161,7 @@ a:hover {
     color: rgba(0, 0, 0, .7);
 }
 
-.d-bloc .panel icon {
+.d-bloc .panel .icon {
     border-color: rgba(0, 0, 0, .7);
 }
 
@@ -264,6 +254,63 @@ a:hover {
     border-color: rgba(0, 0, 0, .3);
 }
 
+
+/* les backgrounds*/
+
+.bg-center,
+.bg-l-edge,
+.bg-r-edge,
+.bg-t-edge,
+.bg-b-edge,
+.bg-tl-edge,
+.bg-bl-edge,
+.bg-tr-edge,
+.bg-br-edge,
+.bg-repeat {
+    -webkit-background-size: auto!important;
+    -moz-background-size: auto!important;
+    -o-background-size: auto!important;
+    background-size: auto!important;
+}
+
+.bg-repeat {
+    background: repeat;
+}
+
+.bg-t-edge {
+    background: top no-repeat;
+}
+
+.bloc-bg-texture::before {
+    content: "";
+    background-size: 2px 2px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.texture-paper::before {
+    background: url("img/texture-paper.png");
+    background-size: 280px 280px;
+    opacity: 0.7;
+}
+
+.b-parallax {
+    background-attachment: fixed;
+}
+
+.bg-banniere {
+    background-image: url("img/la-chouette-agence-banniere.jpg");
+}
+
+.bg-presentation {
+    background-image: url("img/image-de-presentation.jpg");
+}
+
+/* les margins*/
+
 .voffset {
     margin-top: 30px;
 }
@@ -283,9 +330,19 @@ a:hover {
     padding-left: 0;
 }
 
-#bloc-1-hero h1 {
-    font-size: 32px;
+.mg-md {
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
+
+.mg-lg {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+
+
+/* la navbar dans le header*/
 
 .navbar {
     margin-bottom: 0;
@@ -296,8 +353,7 @@ a:hover {
     height: auto;
     padding: 3px 15px;
     font-size: 25px;
-    font-weight: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 44px;
 }
 
@@ -339,11 +395,11 @@ a:hover {
 
 .navbar-toggle {
     margin: 10px 10px 0 0;
-    border: 0px;
+    border: 0;
 }
 
 .navbar-toggle:hover {
-    background: transparent!important;
+    background: transparent;
 }
 
 .navbar-toggle .icon-bar {
@@ -362,6 +418,7 @@ a:hover {
     z-index: 2;
 }
 
+
 @media (min-width: 768px) {
     .site-navigation {
         position: absolute;
@@ -372,7 +429,7 @@ a:hover {
     }
     .nav > li .dropdown-menu a,
     .nav > li .dropdown-menu a:hover {
-        color: #484848;
+        color: #333333;
     }
     .nav-invert .site-navigation {
         left: 0;
@@ -404,7 +461,7 @@ a:hover {
 }
 
 .nav > li > .dropdown a {
-    background: none!important;
+    background: none;
     display: block;
     padding: 14px 15px;
 }
@@ -427,22 +484,10 @@ nav .caret {
 }
 
 .dropdown-menu .dropdown span {
-    border: 4px solid black;
-    border-top-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    margin: 6px -5px 0 0!important;
+    border: 4px solid;
+    border-color: transparent black transparent transparent;
+    margin: 6px -5px 0 0;
     float: right;
-}
-
-.mg-md {
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-.mg-lg {
-    margin-top: 10px;
-    margin-bottom: 40px;
 }
 
 .btn {
@@ -456,12 +501,12 @@ nav .caret {
 .btn-d,
 .btn-d:hover,
 .btn-d:focus {
-    color: #FFF;
-    background: rgba(0, 0, 0, .3);
+    color: #000;
+    background: rgba(175, 175, 175, 0.3);
 }
 
 button {
-    outline: none!important;
+    outline: none;
 }
 
 .btn-rd {
@@ -476,11 +521,11 @@ button {
 }
 
 .icon-md {
-    font-size: 30px!important;
+    font-size: 30px;
 }
 
 .icon-lg {
-    font-size: 60px!important;
+    font-size: 60px;
 }
 
 .sm-shadow {
@@ -538,14 +583,14 @@ a[data-lightbox] {
 
 a[data-lightbox]:hover::before {
     content: "+";
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+    font-family:  Helvetica, Arial, sans-serif;
     font-size: 32px;
     width: 50px;
     height: 50px;
     margin-left: -25px;
     border-radius: 50%;
-    background: rgba(0, 0, 0, .6);
-    color: #FFF;
+    background: rgba(255, 255, 255, .8);
+    color: #252424;
     font-weight: 100;
     z-index: 1;
     position: absolute;
@@ -578,8 +623,8 @@ a[data-lightbox]:hover img {
 
 .lightbox-caption {
     padding: 20px;
-    color: #FFF;
-    background: rgba(0, 0, 0, .5);
+    color: #000;
+    background: rgba(255, 255, 255, .8);
     position: absolute;
     left: 15px;
     right: 15px;
@@ -587,13 +632,13 @@ a[data-lightbox]:hover img {
 }
 
 .close-lightbox {
-    color: #FFF;
+    color: #000;
     font-size: 30px;
     position: absolute;
     top: 20px;
     right: 20px;
     z-index: 20;
-    background: rgba(0, 0, 0, .5);
+    background: #000;
     border: none;
     line-height: 30px;
     padding: 0 9px 5px;
@@ -604,14 +649,14 @@ a[data-lightbox]:hover img {
 .next-lightbox:hover,
 .prev-lightbox:hover {
     opacity: 1.0;
-    color: #FFF;
+    color: #000;
 }
 
 .next-lightbox,
 .prev-lightbox {
     font-size: 20px;
-    color: rgba(255, 255, 255, .9);
-    background: rgba(0, 0, 0, .5);
+    color: #000;
+    background: rgba(255, 255, 255, .8);
     transition: all .2s ease-in-out;
     position: absolute;
     top: 45%;
@@ -635,10 +680,12 @@ a[data-lightbox]:hover img {
 
 .snapshot-lb .lightbox-caption {
     padding: 0;
-    color: rgba(0, 0, 0, .5);
+    color: #000;
     background: none;
 }
 
+/* les styles de textes*/
+/*les tailles*/
 h1,
 h2,
 h3,
@@ -649,13 +696,12 @@ p,
 label,
 .btn,
 a {
-    font-family: "helvetica";
+    font-family: "helvetica", sans-serif;
     font-weight: 400;
-    color: #575757!important;
 }
 
-.container {
-    max-width: 1000px;
+#bloc-1-hero h1 {
+    font-size: 32px;
 }
 
 .hero-bloc-text {
@@ -676,8 +722,9 @@ a {
     margin: auto auto auto auto;
 }
 
-p {
-    font-size: 11px;
+p, a, button, q {
+    font-size: 18px;
+    color:#252424;
 }
 
 .tight-width-whitespace {
@@ -686,14 +733,14 @@ p {
 }
 
 .h1 {
-    font-size: 20px;
-    font-family: "Open Sans";
+    font-size: 32px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
 }
 
 .cta-hero {
     margin-top: 22px;
-    color: #FFFFFF!important;
-    text-transform: uppercase;
+    color: #000;
     padding: 12px 28px 12px 28px;
     font-size: 16px;
     font-weight: 700;
@@ -704,39 +751,39 @@ p {
     margin: auto auto auto auto;
 }
 
-h2 {
-    font-size: 22px;
+
+
+h2, .h3-special {
+    font-size: 26px;
     line-height: 1.4em;
+    font-weight: 600;
 }
 
+/* les couleurs*/
+
 h3 {
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #333333!important;
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
 }
 
 .med-width-whitespace {
     max-width: 800px;
     margin: auto auto auto auto;
-    box-shadow: 0px 0px 0px #000000;
+    box-shadow: 0 0 0 #000;
 }
 
 h1 {
-    color: #333333!important;
+    color: #000;
 }
 
 h4 {
-    color: #333333!important;
+    color: #000;
 }
 
 .icons {
     margin-bottom: 14px;
     margin-top: 24px;
-}
-
-.white {
-    color: #FFFFFF!important;
 }
 
 .portfolio-thumb {
@@ -749,17 +796,17 @@ h4 {
 }
 
 .avatar {
-    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.3);
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
-    padding: 40px 40px 40px 40px;
+    background-color: rgba(0, 0,0, 0.7);
+    padding: 40px;
 }
 
 .bold-link {
     font-weight: 900;
-    text-decoration: underline!important;
+    text-decoration: underline;
 }
 
 .bgc-white {
@@ -770,51 +817,105 @@ h4 {
     background-color: #364577;
 }
 
+/* j'accentue la saturation du orange de 5%*/
 .bgc-atomic-tangerine {
-    background-color: #F3976C;
+    background-color: #f19a71;
+}
+
+.tc-primary {
+    color: #ff8950;
 }
 
 .tc-white {
-    color: #F3976C!important;
+    color: #fff;
+}
+
+.tc-black {
+    color: #000;
+}
+
+.tc-gray {
+    color: #2e3036;
 }
 
 .btn-atomic-tangerine {
-    background: #F3976C;
-    color: #FFFFFF!important;
+    background: #f19a71;
+    color: #2e3036;
 }
 
+/* j'accentue la saturation du orange de 10%*/
 .btn-atomic-tangerine:hover {
-    background: #c27956!important;
-    color: #FFFFFF!important;
+    background: #ff8950;
+    color: #2e3036;
 }
 
 .ltc-white {
-    color: #FFFFFF!important;
+    color: #fff !important;
 }
 
 .ltc-white:hover {
-    color: #cccccc!important;
+    color: #000;
 }
 
 .ltc-atomic-tangerine {
-    color: #F3976C!important;
+    color: #f19a71;
 }
 
 .ltc-atomic-tangerine:hover {
-    color: #c27956!important;
+    color: #ff8950;
 }
 
 .icon-dark-slate-blue {
-    color: #364577!important;
-    border-color: #364577!important;
+    color: #364577;
+    border-color: #364577;
 }
 
-.bg-banniere {
-    background-image: url("img/la-chouette-agence-banniere.jpg");
+/* mes classes additionnelles*/
+
+.fit-content {
+    width: fit-content;
+    width: -moz-fit-content;
 }
 
-.bg-presentation {
-    background-image: url("img/image-de-presentation.jpg");
+.image-resize-mode {
+    width: 120px;
+    height: auto;
+}
+
+#footer .footer-content >div{
+    display: flex;
+    justify-content: space-evenly;
+    color: #000;
+}
+
+.py-3 {
+    padding: 20px 0;
+}
+
+.px-5 {
+    padding: 0 20%;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact > ul > li {
+ font-size: 16px;
+}
+
+.google-map {
+    max-width: 700px;
+    min-width: 200px;
+    margin-bottom: 1rem;
+}
+
+.google-map>iframe {
+    width: fit-content;
+    width: -moz-fit-content;
+    height: 300px;
 }
 
 @media (max-width: 1024px) {
@@ -894,8 +995,8 @@ h4 {
     h6,
     p,
     #disqus_thread {
-        padding-left: 10px!important;
-        padding-right: 10px!important;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .b-parallax {
         background-attachment: scroll;
@@ -928,7 +1029,7 @@ h4 {
     }
     .dropdown .dropdown a .caret {
         float: none;
-        margin: 5px 0 0 10px!important;
+        margin: 5px 0 0 10px;
         border: 4px solid black;
         border-bottom-color: transparent;
         border-right-color: transparent;
