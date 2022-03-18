@@ -6,9 +6,9 @@ dark-gray:  rgba(255, 255, 255, .6);
 dark-gray: border-color: rgba(255, 255, 255, .2);
 hell-gray: rgba(255, 255, 255, .6);;
 black: #000;
-black-opacity-.5: color: rgba(0, 0, 0, .7);
+black-opacity-.7: color: rgba(0, 0, 0, .7);
 black-opacity-.5: color: rgba(0, 0, 0, .5);
-orange: background: #f18f63; j'ai rajouter de la saturation
+orange: background: #f18f63; j'ai rajouter de la saturation (lecture en noir et blanc)
 
 
  */
@@ -425,7 +425,6 @@ ul, ol, li {
         top: 50%;
         right: 20px;
         transform: translate(0, -50%);
-        -webkit-transform: translateY(-50%);
     }
     .nav > li .dropdown-menu a,
     .nav > li .dropdown-menu a:hover {
@@ -451,7 +450,7 @@ ul, ol, li {
         position: relative;
         width: 100%;
         right: 0;
-        margin-right: 0px;
+        margin-right: 0;
         margin-top: 20px;
     }
     .nav-center.mini-nav .navbar-toggle {
@@ -596,7 +595,6 @@ a[data-lightbox]:hover::before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
 }
 
 a[data-lightbox]:hover img {
@@ -817,13 +815,18 @@ h4 {
     background-color: #364577;
 }
 
+.bg-lisible {
+    background: rgba(0, 0, 0, .5);
+    padding: 10px 20px 30px;
+}
+
 /* j'accentue la saturation du orange de 5%*/
 .bgc-atomic-tangerine {
     background-color: #f19a71;
 }
 
 .tc-primary {
-    color: #ff8950;
+    color: #f19a71;
 }
 
 .tc-white {
@@ -871,6 +874,7 @@ h4 {
 }
 
 /* mes classes additionnelles*/
+/*generale*/
 
 .fit-content {
     width: fit-content;
@@ -895,6 +899,40 @@ h4 {
 .px-5 {
     padding: 0 20%;
 }
+.no-bold strong {
+    font-weight: normal;
+}
+
+.txt-justify {
+    text-align: justify;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+
+}
+.m-auto {
+    margin: 1rem auto;
+    float: none !important;
+}
+
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* particulière*/
+#footer .footer-content >div a:hover, #footer .footer-content >div a:focus, .footer-content >div a:active,
+#footer .footer-content >div a >span:hover {
+    padding: 5px;
+    background: rgba(255, 255, 255, .2);
+    color: #000 !important;
+    text-decoration: none;
+}
+
+#footer .footer-content >div a >span {
+    margin-right: 5px;
+}
 
 .contact {
     display: flex;
@@ -904,6 +942,7 @@ h4 {
 
 .contact > ul > li {
  font-size: 16px;
+    color: black;
 }
 
 .google-map {
@@ -916,6 +955,19 @@ h4 {
     width: fit-content;
     width: -moz-fit-content;
     height: 300px;
+}
+
+.alert-warning {
+    color: #8a3b49;
+    background-color: #f1c3d0;
+    border-color: #7e1010;
+}
+
+.navbar a {
+    color: #000 !important;
+}
+
+.navbar a:hover{
 }
 
 @media (max-width: 1024px) {
@@ -1013,7 +1065,6 @@ h4 {
     .site-navigation {
         position: inherit;
         transform: none;
-        -webkit-transform: none;
         -ms-transform: none;
     }
     .nav > li {
@@ -1030,10 +1081,8 @@ h4 {
     .dropdown .dropdown a .caret {
         float: none;
         margin: 5px 0 0 10px;
-        border: 4px solid black;
-        border-bottom-color: transparent;
-        border-right-color: transparent;
-        border-left-color: transparent;
+        border: 4px solid;
+        border-color: black transparent transparent transparent;
     }
     #hero-bloc .navbar .nav {
         background: rgba(0, 0, 0, .8);
@@ -1119,6 +1168,7 @@ h4 {
         width: 180px;
         height: 320px;
     }
+
 }
 
 @media (max-width: 400px) {
