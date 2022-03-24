@@ -940,15 +940,16 @@ h4 {
     justify-content: center;
 }
 
-.contact > ul > li {
- font-size: 16px;
+.contact > ul > li, .contact > ul > li>a{
+ font-size: 20px;
     color: black;
 }
 
 .google-map {
     max-width: 700px;
     min-width: 200px;
-    margin-bottom: 1rem;
+    max-height: 300px;
+    margin-top: 3rem;
 }
 
 .google-map>iframe {
@@ -1031,6 +1032,10 @@ h4 {
         padding: 0 20px;
         padding-left: constant(safe-area-inset-left);
         padding-right: constant(safe-area-inset-right);
+    }
+    .max-w-80 {
+        max-width: 80%;
+        margin: 0 auto;
     }
 }
 
