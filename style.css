@@ -922,8 +922,7 @@ h4 {
     justify-content: center;
 }
 /* particulière*/
-#footer .footer-content >div a:hover, #footer .footer-content >div a:focus, .footer-content >div a:active,
-#footer .footer-content >div a >span:hover {
+#footer .footer-content >div a:hover, #footer .footer-content >div a:focus, .footer-content >div a:active{
     padding: 5px;
     background: rgba(255, 255, 255, .2);
     color: #000 !important;
@@ -1018,20 +1017,10 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
-    .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
     .bloc-group,
     .bloc-group .bloc {
         display: block;
         width: 100%;
-    }
-    .bloc-fill-screen .fill-bloc-top-edge,
-    .bloc-fill-screen .fill-bloc-bottom-edge {
-        padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
     }
     .max-w-80 {
         max-width: 80%;
