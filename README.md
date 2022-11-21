@@ -1,4 +1,4 @@
-# Projet 4 - La chouette agence
+# Optimisation S.E.O - La chouette agence
 
 **Projet-Openclassrooms** : <br />
 Parcours Web développeur - 2021
