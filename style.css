@@ -84,7 +84,8 @@ li, ol, ul {
 }
 
 .d-bloc .a-btn, .d-bloc .navbar a, .d-bloc .navbar-brand, .d-bloc a .icon-lg, .d-bloc a .icon-md, .d-bloc a .icon-sm, .d-bloc a .icon-xl, .d-bloc figcaption, .d-bloc h1 a, .d-bloc h2 a, .d-bloc h3 a, .d-bloc h4 a, .d-bloc h5 a, .d-bloc h6 a, .d-bloc p a {
-    color: #000
+    color: #000;
+    font-size: 1.5rem;
 }
 
 .d-bloc .a-btn:hover, .d-bloc .navbar a:hover, .d-bloc .navbar-brand:hover, .d-bloc a:hover .icon-lg, .d-bloc a:hover .icon-md, .d-bloc a:hover .icon-sm, .d-bloc a:hover .icon-xl, .d-bloc h1 a:hover, .d-bloc h2 a:hover, .d-bloc h3 a:hover, .d-bloc h4 a:hover, .d-bloc h5 a:hover, .d-bloc h6 a:hover, .d-bloc p a:hover {
