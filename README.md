@@ -5,8 +5,7 @@ Parcours Web développeur - 2021
 
 **Projet n°4** : "Optimisez un site web existant "
 
-![ohmyfood](https://user-images.githubusercontent.com/82466002/203107077-799d0435-c518-406d-a895-9178055b93a0.png)
-
+![chouette_agence](https://user-images.githubusercontent.com/82466002/206933657-9e8c4947-fd37-47cf-84fc-69d271a38217.jpg)
 
 ## Description du projet
 
