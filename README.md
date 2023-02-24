@@ -37,7 +37,7 @@ Lighthouse, Google Ads, Ubbersuggest, GT Metrix
 <img width="843" alt="CleanShot 2022-11-21 at 18 05 08@2x" src="https://user-images.githubusercontent.com/82466002/203116501-3da5e61d-1f00-445f-b7b6-c8ea63965218.png">
 
 
-### GT Metix
+### GT Metrix
 
 <img width="665" alt="CleanShot 2022-11-21 at 17 59 13@2x" src="https://user-images.githubusercontent.com/82466002/203115378-c8ce928b-626a-4146-bcc3-f78f13d91e34.png">
 
